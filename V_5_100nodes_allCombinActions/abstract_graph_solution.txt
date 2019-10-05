@@ -1,0 +1,25 @@
+INFO     Running translator.
+INFO     translator input: ['./v5_abstract_graph_domain_file.pddl', './v5_abstract_graph_problem_file.pddl']
+INFO     translator arguments: []
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     callstring: /home/yochan/miniconda3/bin/python /home/yochan/FastDownward/builds/release32/bin/translate/translate.py ./v5_abstract_graph_domain_file.pddl ./v5_abstract_graph_problem_file.pddl
+Parsing...
+Parsing: [3.530s CPU, 3.524s wall-clock]
+Normalizing task... [0.850s CPU, 0.846s wall-clock]
+Instantiating...
+Generating Datalog program... [1.050s CPU, 1.054s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [14.840s CPU, 14.847s wall-clock]
+Preparing model... [6.440s CPU, 6.433s wall-clock]
+Generated 212941 rules.
+Computing model... [7.280s CPU, 7.275s wall-clock]
+9738 relevant atoms
+204796 auxiliary atoms
+214534 final queue length
+243569 total queue pushes
+Completing instantiation... [0.530s CPU, 0.528s wall-clock]
+Instantiating: [30.990s CPU, 30.993s wall-clock]
+Computing fact groups...
+Finding invariants...
+26 initial candidates
