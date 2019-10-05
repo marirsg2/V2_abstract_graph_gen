@@ -1,38 +1,37 @@
 INFO     Running translator.
-INFO     translator input: ['./v5_abstract_graph_domain_file.pddl', './v5_abstract_graph_problem_file.pddl']
+INFO     translator input: ['./v6_abstract_graph_domain_file.pddl', './v6_abstract_graph_problem_file.pddl']
 INFO     translator arguments: []
 INFO     translator time limit: None
 INFO     translator memory limit: None
-INFO     callstring: /home/yochan/miniconda3/bin/python /home/yochan/FastDownward/builds/release32/bin/translate/translate.py ./v5_abstract_graph_domain_file.pddl ./v5_abstract_graph_problem_file.pddl
+INFO     callstring: /home/yochan/miniconda3/bin/python /home/yochan/FastDownward/builds/release32/bin/translate/translate.py ./v6_abstract_graph_domain_file.pddl ./v6_abstract_graph_problem_file.pddl
 Parsing...
-Parsing: [35.550s CPU, 35.562s wall-clock]
-Normalizing task... [8.050s CPU, 8.043s wall-clock]
+Parsing: [0.000s CPU, 0.003s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
 Instantiating...
-Generating Datalog program... [7.660s CPU, 7.657s wall-clock]
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
 Normalizing Datalog program...
-Normalizing Datalog program: [177.100s CPU, 177.108s wall-clock]
-Preparing model... [57.230s CPU, 57.224s wall-clock]
-Generated 2097089 rules.
-Computing model... [60.380s CPU, 60.389s wall-clock]
-2577 relevant atoms
-1328226 auxiliary atoms
-1330803 final queue length
-1340181 total queue pushes
-Completing instantiation... [1.090s CPU, 1.091s wall-clock]
-Instantiating: [311.520s CPU, 311.524s wall-clock]
+Normalizing Datalog program: [0.010s CPU, 0.007s wall-clock]
+Preparing model... [0.000s CPU, 0.003s wall-clock]
+Generated 106 rules.
+Computing model... [0.030s CPU, 0.022s wall-clock]
+495 relevant atoms
+1987 auxiliary atoms
+2482 final queue length
+3153 total queue pushes
+Completing instantiation... [0.010s CPU, 0.011s wall-clock]
+Instantiating: [0.050s CPU, 0.044s wall-clock]
 Computing fact groups...
 Finding invariants...
-32 initial candidates
-Time limit reached, aborting invariant generation
-Finding invariants: [366.450s CPU, 366.464s wall-clock]
-Checking invariant weight... [0.000s CPU, 0.001s wall-clock]
+3 initial candidates
+Finding invariants: [0.040s CPU, 0.039s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
 Instantiating groups... [0.000s CPU, 0.000s wall-clock]
 Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
 Choosing groups...
-8 uncovered facts
+0 uncovered facts
 Choosing groups: [0.000s CPU, 0.000s wall-clock]
 Building translation key... [0.000s CPU, 0.000s wall-clock]
-Computing fact groups: [366.450s CPU, 366.466s wall-clock]
+Computing fact groups: [0.040s CPU, 0.040s wall-clock]
 Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
 Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
 Building mutex information...
@@ -40,21 +39,21 @@ Building mutex information: [0.000s CPU, 0.000s wall-clock]
 Translating task...
 Processing axioms...
 Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
-Processing axioms: [0.010s CPU, 0.011s wall-clock]
-Translating task: [0.120s CPU, 0.123s wall-clock]
-2452 effect conditions simplified
+Processing axioms: [0.000s CPU, 0.000s wall-clock]
+Translating task: [0.000s CPU, 0.008s wall-clock]
+0 effect conditions simplified
 0 implied preconditions added
 Detecting unreachable propositions...
 0 operators removed
 0 axioms removed
-12 propositions removed
-Detecting unreachable propositions: [0.050s CPU, 0.047s wall-clock]
+6 propositions removed
+Detecting unreachable propositions: [0.010s CPU, 0.004s wall-clock]
 Reordering and filtering variables...
-1 of 20 variables necessary.
-0 of 12 mutex groups necessary.
-9 of 1258 operators necessary.
+1 of 6 variables necessary.
+0 of 6 mutex groups necessary.
+9 of 221 operators necessary.
 0 of 0 axiom rules necessary.
-Reordering and filtering variables: [0.030s CPU, 0.027s wall-clock]
+Reordering and filtering variables: [0.000s CPU, 0.001s wall-clock]
 Translator variables: 1
 Translator derived variables: 0
 Translator facts: 10
@@ -64,9 +63,9 @@ Translator total mutex groups size: 0
 Translator operators: 9
 Translator axioms: 0
 Translator task size: 39
-Translator peak memory: 10044860 KB
+Translator peak memory: 269500 KB
 Writing output... [0.000s CPU, 0.000s wall-clock]
-Done! [721.850s CPU, 721.871s wall-clock]
+Done! [0.100s CPU, 0.101s wall-clock]
 INFO     Running search (release32).
 INFO     search input: output.sas
 INFO     search arguments: ['--heuristic', 'hff=ff()', '--heuristic', 'hcea=cea()', '--search', 'lazy_greedy([hff, hcea], preferred=[hff, hcea])']
@@ -74,16 +73,16 @@ INFO     search time limit: None
 INFO     search memory limit: None
 INFO     search executable: /home/yochan/FastDownward/builds/release32/bin/downward
 INFO     callstring: /home/yochan/FastDownward/builds/release32/bin/downward --heuristic 'hff=ff()' --heuristic 'hcea=cea()' --search 'lazy_greedy([hff, hcea], preferred=[hff, hcea])' --internal-plan-file sas_plan < output.sas
-reading input... [t=3.0681e-05s]
-done reading input! [t=0.000133901s]
-packing state variables...done! [t=0.000146786s]
+reading input... [t=2.6229e-05s]
+done reading input! [t=0.000113915s]
+packing state variables...done! [t=0.000123249s]
 Variables: 1
 FactPairs: 10
 Bytes per state: 4
-Building successor generator...done! [t=0.000214202s]
+Building successor generator...done! [t=0.000181397s]
 peak memory difference for root successor generator creation: 0 KB
-time for root successor generation creation: 8.67e-06s
-done initializing global data [t=0.000254565s]
+time for root successor generation creation: 6.635e-06s
+done initializing global data [t=0.000210871s]
 Simplifying 9 unary operators... done! [9 unary operators]
 Initializing additive heuristic...
 Initializing FF heuristic...
@@ -91,44 +90,44 @@ Initializing context-enhanced additive heuristic...
 Conducting lazy best first search, (real) bound = 2147483647
 New best heuristic value for cea: 9
 New best heuristic value for ff: 9
-[g=0, 1 evaluated, 0 expanded, t=0.000624s, 4360 KB]
+[g=0, 1 evaluated, 0 expanded, t=0.000487126s, 4360 KB]
 Initial heuristic value for cea: 9
 Initial heuristic value for ff: 9
 New best heuristic value for cea: 8
 New best heuristic value for ff: 8
-[g=1, 2 evaluated, 1 expanded, t=0.000695242s, 4360 KB]
+[g=1, 2 evaluated, 1 expanded, t=0.000551441s, 4360 KB]
 New best heuristic value for cea: 7
 New best heuristic value for ff: 7
-[g=2, 3 evaluated, 2 expanded, t=0.000744255s, 4360 KB]
+[g=2, 3 evaluated, 2 expanded, t=0.000588475s, 4360 KB]
 New best heuristic value for cea: 6
 New best heuristic value for ff: 6
-[g=3, 4 evaluated, 3 expanded, t=0.000786182s, 4360 KB]
+[g=3, 4 evaluated, 3 expanded, t=0.000623124s, 4360 KB]
 New best heuristic value for cea: 5
 New best heuristic value for ff: 5
-[g=4, 5 evaluated, 4 expanded, t=0.00082937s, 4360 KB]
+[g=4, 5 evaluated, 4 expanded, t=0.000656794s, 4360 KB]
 New best heuristic value for cea: 4
 New best heuristic value for ff: 4
-[g=5, 6 evaluated, 5 expanded, t=0.000871903s, 4360 KB]
+[g=5, 6 evaluated, 5 expanded, t=0.000689787s, 4360 KB]
 New best heuristic value for cea: 3
 New best heuristic value for ff: 3
-[g=6, 7 evaluated, 6 expanded, t=0.00091147s, 4360 KB]
+[g=6, 7 evaluated, 6 expanded, t=0.000720804s, 4360 KB]
 New best heuristic value for cea: 2
 New best heuristic value for ff: 2
-[g=7, 8 evaluated, 7 expanded, t=0.000952269s, 4492 KB]
+[g=7, 8 evaluated, 7 expanded, t=0.000753076s, 4492 KB]
 New best heuristic value for cea: 1
 New best heuristic value for ff: 1
-[g=8, 9 evaluated, 8 expanded, t=0.00100538s, 4492 KB]
+[g=8, 9 evaluated, 8 expanded, t=0.000794753s, 4492 KB]
 Solution found!
-Actual search time: 0.000454917s [t=0.00104517s]
-op_propx v0 v1 (1)
-op_propx v1 v2 (1)
-op_propx v2 v3 (1)
-op_propx v3 v4 (1)
-op_propx v4 v5 (1)
-op_propx v5 v6 (1)
-op_propx v6 v7 (1)
-op_propx v7 v8 (1)
-op_propx v8 v9 (1)
+Actual search time: 0.000367054s [t=0.000827287s]
+op_prop1 propx v0 v1 (1)
+op_prop1 propx v1 v2 (1)
+op_prop1 propx v2 v3 (1)
+op_prop1 propx v3 v4 (1)
+op_prop1 propx v4 v5 (1)
+op_prop1 propx v5 v6 (1)
+op_prop1 propx v6 v7 (1)
+op_prop1 propx v7 v8 (1)
+op_prop1 propx v8 v9 (1)
 Plan length: 9 step(s).
 Plan cost: 9
 Expanded 9 state(s).
@@ -140,7 +139,7 @@ Dead ends: 0 state(s).
 Number of registered states: 10
 Int hash set load factor: 10/16 = 0.625
 Int hash set resizes: 4
-Search time: 0.000479904s
-Total time: 0.00105117s
+Search time: 0.000381376s
+Total time: 0.000832159s
 Solution found.
 Peak memory: 4492 KB

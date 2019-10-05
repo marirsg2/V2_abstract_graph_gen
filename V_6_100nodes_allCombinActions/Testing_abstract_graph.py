@@ -4,8 +4,8 @@ import time
 
 fast_downward_exec_loc = "~/FastDownward/fast-downward.py"
 fd_heuristic_config = "--heuristic \"hff=ff()\" --heuristic \"hcea=cea()\" --search \"lazy_greedy([hff, hcea], preferred=[hff, hcea])\""
-domain_file_loc = "./v5_abstract_graph_domain_file.pddl"
-problem_file_loc = "./v5_abstract_graph_problem_file.pddl"
+domain_file_loc = "./v6_abstract_graph_domain_file.pddl"
+problem_file_loc = "./v6_abstract_graph_problem_file.pddl"
 
 
 # problem_file_loc = "./problem_logistics_c4_s3_p1_a1.pddl"

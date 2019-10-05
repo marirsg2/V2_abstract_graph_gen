@@ -96,7 +96,4 @@ with open(domain_file_name,"w") as domain_dest:
     domain_dest.write(domain_file_string)
 
 
-
-
-
-
+print("Domain file generated")

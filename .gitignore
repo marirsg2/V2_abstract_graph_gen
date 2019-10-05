@@ -1,2 +1,6 @@
 *.pddl
 *.p
+
+*.pyc
+
+\.idea/

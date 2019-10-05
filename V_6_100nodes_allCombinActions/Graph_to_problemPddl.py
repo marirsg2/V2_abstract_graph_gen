@@ -7,7 +7,7 @@ import pickle
 import networkx as nx
 
 pickle_source_file = "abstract_graph_domain.p"
-problem_file_name = "v5_abstract_graph_problem_file.pddl"
+problem_file_name = "v6_abstract_graph_problem_file.pddl"
 
 with open(pickle_source_file,"rb") as src:
     state_graph = pickle.load(src)
@@ -27,6 +27,7 @@ problem_file_string = \
 all_values = set()
 for prop in edge_propositions:
     all_values.update(set(prop.split("_end_")[1].split("_")))
+    all_values.update(set(prop.split("_end_")[0].split("_")[1:]))
 
 problem_file_string += " ".join(list(all_values))
 
@@ -36,12 +37,13 @@ problem_file_string += "(:init \n "
 #now setup the initial state. For each property set a value. The value is set by the property range of that property
 #todo make this randomly choose a value rather than determinisitically
 for single_item in dict_prop_to_value_range.items():
-    problem_file_string += "(" + single_item[0] + " v" +str(single_item[1][0]) + ")\n"
+    problem_file_string += "(Value "  + single_item[0] + " v" +str(single_item[1][0]) + ")\n"
 
 
 string_edge_props = set()
 for single_edge_proposition in edge_propositions:
-    string_edge_props.add("(" + single_edge_proposition.split("_end_")[0] + " " + \
+    vars = single_edge_proposition.split("_end_")[0].split("_")[1:]
+    string_edge_props.add("(Allow"+ str(len(vars)) + " " + " ".join(vars) + " " + \
                            " ".join(single_edge_proposition.split("_end_")[1].split("_")) + ") \n")
 for single_string_edge_prop in string_edge_props:
     problem_file_string += single_string_edge_prop
@@ -54,7 +56,7 @@ problem_file_string += ")\n" #close the init block
 problem_file_string += "(:goal \n "
 problem_file_string += "(and \n "
 #todo make this randomized
-problem_file_string += "(propx v9) \n"
+problem_file_string += "(Value propx v9) \n"
 problem_file_string += ")\n" #end "and"
 problem_file_string += ")" #end "goal:
 

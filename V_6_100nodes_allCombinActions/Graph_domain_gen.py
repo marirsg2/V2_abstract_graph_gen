@@ -22,7 +22,7 @@ import copy
 # MAYBE easier to go direct from the graph OR EDGE PROPOSITIONS, which map to actions and precond and effects
 
 pickle_dest_file_name = "abstract_graph_domain.p"
-num_rand_properties = 15 #prop1, prop2 etc. #INCREASES time the most (exponentially). So the number of actions affects it.
+num_rand_properties = 5 #prop1, prop2 etc. #INCREASES time the most (exponentially). So the number of actions affects it.
 value_ranges = [[0,1]] * num_rand_properties #can be diff range of values too, Increases time by very little
 dict_prop_to_value_range = {}
 odds_of_edge = 0.125 #increases time moderately
